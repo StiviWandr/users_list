@@ -1,0 +1,44 @@
+.usercard{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+    padding: 0 20px;
+    border-bottom: 1px solid #C0C0C0;
+}
+.number{
+    min-width: 20px;
+    width: max-content;
+}
+.img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.activeImg{
+    border: 1px solid #dd45fc;
+}
+.userinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.raceinfo{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    font-size: 16px;
+}
+.name{
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.time{
+    color: rgb(200, 142, 255);
+}
+.speed{
+    color: rgb(92, 179, 254);
+}
