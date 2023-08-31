@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import helmetIcon from './assets/helmet.svg';
 import { User } from './interfaces/race';
 import { mockupUsers } from './mockups/users';
 import { UserCard } from './Components/UserCard/UserCard';
@@ -9,7 +8,7 @@ import { UserCard } from './Components/UserCard/UserCard';
 
 
 function App() {
-    const [isLoading, setIsLoading] = useState(true);
+    const [_, setIsLoading] = useState(true);
     const [users, setUsers] = useState < User[] > ([]);
     const [hasMore, setHasMore] = useState(true);
     const [activeUser, setActiveUser] = useState<number | null>(null)
@@ -36,10 +35,6 @@ function App() {
             setUsers([...users, ...newUsers]);
         }, 1500);
     };
-
-    const userClickHandler = (index: number) => {
-        setActiveUser(index)
-    }
     return (
         <div className="App">
             <header className="App-header">
